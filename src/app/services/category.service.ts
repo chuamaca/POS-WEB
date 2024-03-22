@@ -38,6 +38,7 @@ export class CategoryService {
       getInputs.startDate,
       getInputs.endDate
     )
+    
 
     return this._http.post<CategoryApi>(requestUrl, params).pipe(
       map((data: CategoryApi) => {
@@ -54,7 +55,7 @@ export class CategoryService {
               break
           }
         })
-        console.log(data)
+       
         return data
       })
     )

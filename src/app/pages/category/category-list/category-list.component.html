@@ -13,11 +13,9 @@
         <mat-drawer-container class="bg-transparent flex-auto flex">
             <mat-drawer-content class="p-gutter pt-0 flex-auto flex items-start">
                 <div class="card h-full overflow-hidden flex-auto">
-                    <vex-list-table (rowClick)="rowClick($event)" service="_categoryService"
+                    <vex-list-table (rowClick)="rowClick($event)" [service]="_categoryService"
                         [columns]="component.tableColumns" [sortBy]="component.initialSortDir" [getInputs]="component.getInputs"
                         [buttonLabel]="component.buttonLabel">
-
-
                     </vex-list-table>
                 </div>
             </mat-drawer-content>

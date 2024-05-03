@@ -49,6 +49,34 @@ export class CategoryListComponent implements OnInit {
     return false
   }
 
+setData(data: any =null){
+  this.component.filters.stateFilter=data.value
+  this.component.menuOpen=false
+  this.formsGetImputs()
+
+}
+
+
+  //METODO
+  formsGetImputs(){
+    let inputs={
+      numFilter:0,
+      textFilter:"",
+      stateFilter:null,
+      startDate:null,
+      endDate:null
+    }
+
+    //Validaciones para filtrar busquedas y estados
+    if(this.component.filters.stateFilter!=null){
+      inputs.stateFilter=this.component.filters.stateFilter
+    }
+
+    // STEAR
+
+    this.component.getInputs=inputs
+    
+  }
   
   CategoryEdit(row: CategoryApi) {
 

@@ -34,7 +34,7 @@ export class CategoryService {
       size,
       getInputs.numFilter,
       getInputs.textFilter,
-      getInputs.textFilter,
+      getInputs.state,
       getInputs.startDate,
       getInputs.endDate
     )

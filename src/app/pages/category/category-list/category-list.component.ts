@@ -50,15 +50,17 @@ export class CategoryListComponent implements OnInit {
   }
 
 setData(data: any =null){
+  console.log("setData: " + JSON.stringify(data))
+
+
   this.component.filters.stateFilter=data.value
   this.component.menuOpen=false
-  this.formsGetImputs()
-
+  this.formatGetInputs()
 }
 
 
   //METODO
-  formsGetImputs(){
+  formatGetInputs(){
     let inputs={
       numFilter:0,
       textFilter:"",
@@ -70,10 +72,12 @@ setData(data: any =null){
     //Validaciones para filtrar busquedas y estados
     if(this.component.filters.stateFilter!=null){
       inputs.stateFilter=this.component.filters.stateFilter
+
+      console.log("inputs.stateFilter: " + inputs.stateFilter)
     }
 
     // STEAR
-
+    
     this.component.getInputs=inputs
     
   }

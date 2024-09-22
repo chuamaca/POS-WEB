@@ -28,7 +28,7 @@ const menuItems: ListTableMenu[] = [
     ,
     {
         type:"link",
-        id:"Activo",
+        id:"Inactivo",
         value:0,
         icon:icLabel,
         label:"Inactivo",
@@ -44,7 +44,6 @@ const tableColumns: TableColumn<Category>[] = [
     property: "name",
     type: "text",
     cssClasses: ['font-mediun', 'w-10']
-
 },
 {
     label: "Descripcion",
@@ -112,7 +111,7 @@ export const componentSettings = {
     getInputs: inputs,
     buttonLabel: "EDITAR",
     buttonLabel2: "ELIMINAR",
-    //SERACH FILTERS
+    //SEARCH FILTERS
     menuItems:menuItems,
     filters:filters,
     columnsFilter: tableColumns.map((column) => { return { label: column.label, property: column.property, type: column.type } })

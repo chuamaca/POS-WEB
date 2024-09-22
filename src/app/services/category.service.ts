@@ -34,11 +34,12 @@ export class CategoryService {
       size,
       getInputs.numFilter,
       getInputs.textFilter,
-      getInputs.state,
+      getInputs.stateFilter,
       getInputs.startDate,
       getInputs.endDate
     )
     
+    console.log("Parametros: " + JSON.stringify(params))
 
     return this._http.post<CategoryApi>(requestUrl, params).pipe(
       map((data: CategoryApi) => {
@@ -55,6 +56,8 @@ export class CategoryService {
               break
           }
         })
+
+        console.log(data);
        
         return data
       })
